@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Cambodia | Wonder of the World</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <script src="./scripts/theme.js"></script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navigation -->
+    <header
+        class="fixed w-full z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border-b border-gray-100 dark:border-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-blue-800 dark:text-blue-400">CAMBODIA<span
+                    class="text-red-600">.</span></a>
+            <div class="hidden md:flex space-x-10 items-center font-semibold">
+                <a href="index.html" class="text-red-600">Home</a>
+                <a href="destinations.html" class="hover:text-red-600 transition-colors">Destinations</a>
+                <a href="about.html" class="hover:text-red-600 transition-colors">About</a>
+                <a href="contact.html" class="hover:text-red-600 transition-colors">Contact</a>
+                <a href="auth.html"
+                    class="bg-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition-all">Sign In</a>
+                <button onclick="toggleTheme()" class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z">
+                        </path>
+                    </svg>
+                    <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
+            </div>
+            <button class="md:hidden">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://in.pinterest.com/pin/785174516256998803/" alt="Angkor Wat"
+                class="bg-[ w-full h-full object-cover]">
+            <div class="absolute inset-0 bg-black"></div>
+        </div>
+        <div class="relative z-10 container mx-auto px-6 text-center text-white">
+            <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight tracking-tighter">KINGDOM OF <br><span
+                    class="text-red-500">WONDER</span></h1>
+            <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-light text-gray-200">Discover the magic of
+                ancient temples, pristine beaches, and the soul of Southeast Asia.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="destinations.html"
+                    class="bg-red-600 text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-red-700 transition-all shadow-xl hover:shadow-red-500/50">Start
+                    Exploring</a>
+                <a href="about.html"
+                    class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-white/20 transition-all">Learn
+                    More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="py-24 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black mb-4">Top Experiences</h2>
+                <div class="w-24 h-1.5 bg-red-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Item 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl mb-6">
+                        <img src="./pic/ECAR_Sunset_Ankgor_Wat_Cambodia.jpg" alt="Culture"
+                            class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+                            <h3 class="text-2xl font-bold text-white">Ancient Temples</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl mb-6">
+                        <img src="./pic/30.312.1-Cambodias-Eco-friendly-Retreat-Song-Saa-Private-Island.webp"
+                            alt="Island"
+                            class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+                            <h3 class="text-2xl font-bold text-white">Tropical Islands</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl mb-6">
+                        <img src="./pic/Ivory-Modern-Aesthetic-Interior-Design-Photo-Collage-Instagram-Post-1024x1024.webp"
+                            alt="City"
+                            class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+                            <h3 class="text-2xl font-bold text-white">Urban Energy</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16 mb-16">
+            <div class="col-span-1 md:col-span-2">
+                <h4 class="text-3xl font-black text-blue-800 dark:text-blue-400 mb-6 uppercase">Cambodia<span
+                        class="text-red-600">.</span></h4>
+                <p class="text-gray-600 dark:text-gray-400 max-w-md text-lg leading-relaxed">Dedicated to showcasing the
+                    unparalleled beauty of the Kingdom of Wonder. Join us on a journey through history, nature, and
+                    culture.</p>
+            </div>
+            <div>
+                <h5 class="text-lg font-bold mb-6">Explore</h5>
+                <ul class="space-y-4 text-gray-500 dark:text-gray-400">
+                    <li><a href="destinations.html" class="hover:text-red-600 transition-colors">Siem Reap</a></li>
+                    <li><a href="destinations.html" class="hover:text-red-600 transition-colors">Phnom Penh</a></li>
+                    <li><a href="destinations.html" class="hover:text-red-600 transition-colors">Koh Rong</a></li>
+                    <li><a href="destinations.html" class="hover:text-red-600 transition-colors">Kampot</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-lg font-bold mb-6">Contact</h5>
+                <ul class="space-y-4 text-gray-500 dark:text-gray-400">
+                    <li>hello@visitcambodia.com</li>
+                    <li>+855 23 456 789</li>
+                    <li>Phnom Penh, Cambodia</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="container mx-auto px-6 pt-10 border-t border-gray-100 dark:border-gray-800 text-center text-gray-400 text-sm">
+            &copy; 2026 Kingdom of Cambodia Tourism. Official Guide.
+        </div>
+    </footer>
+</body>
+
+</html>

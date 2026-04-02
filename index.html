@@ -8,44 +8,45 @@
     <title>Visit Cambodia </title>
     <link href="./dist/output.css" rel="stylesheet">
     <script src="./scripts/theme.js"></script>
+    
     <link rel="shortcut icon" href="./pic/circlesunset1.webp" type="image/x-icon">
 </head>
 
 <body class="bg-yellow-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
     <!-- Navigation -->
-    <header
-        class="fixed w-full z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border-b border-gray-100 dark:border-gray-800">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-black text-blue-800 dark:text-blue-400">CAMBODIA<span
-                    class="text-red-600">.</span></a>
-            <div class="hidden md:flex space-x-10 items-center font-semibold">
-                <a href="index.html" class="text-red-600">Home</a>
-                <a href="#Destinations" class="hover:text-red-600 transition-colors">Destinations</a>
+ <header class="fixed w-full z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border-b border-gray-100 dark:border-gray-800">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-black text-blue-800 dark:text-blue-400">
+            CAMBODIA<span class="text-red-600">.</span>
+        </a>
 
-                <a href="#contact" class="hover:text-red-600 transition-colors">Contact</a>
-                <a href="#about" class="hover:text-red-600 transition-colors">About</a>
-                <a href="#login"
-                    class="bg-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition-all">Sign In</a>
+        <div id="mobile-menu" class="hidden flex absolute top-full left-0 w-full bg-white dark:bg-gray-900 flex-col items-center space-y-6 py-8 shadow-xl md:shadow-none md:static md:flex md:flex-row md:w-auto md:bg-transparent md:space-y-0 md:space-x-10 md:py-0 font-semibold">
+            <a href="index.html" class="text-red-600">Home</a>
+            <a href="#Destinations" class="hover:text-red-600 transition-colors">Destinations</a>
+            <a href="#contact" class="hover:text-red-600 transition-colors">Contact</a>
+            <a href="#about" class="hover:text-red-600 transition-colors">About</a>
+            <a href="#login" class="bg-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition-all">Sign In</a>
+        </div>
 
-                <button onclick="toggleTheme()" class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z">
-                        </path>
-                    </svg>
-                    <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                    </svg>
-                </button>
-            </div>
-            <button class="md:hidden">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
+        <div class="flex items-center space-x-4">
+            <button onclick="toggleTheme()" class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"></path>
+                </svg>
+                <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                 </svg>
             </button>
-        </nav>
-    </header>
+
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
+
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">

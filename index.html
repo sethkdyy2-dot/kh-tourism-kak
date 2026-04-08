@@ -8,7 +8,12 @@
 
     <link href="./dist/output.css" rel="stylesheet">
     <script src="./scripts/theme.js"></script>
-
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+ 
     <link rel="shortcut icon" href="./pic/circlesunset1.webp" type="image/x-icon">
     <!-- HTML Meta Tags -->
     <title>Visit Cambodia </title>
@@ -50,6 +55,7 @@
                 <a href="#Destinations" class="hover:text-red-600 transition-colors">Destinations</a>
                 <a href="#contact" class="hover:text-red-600 transition-colors">Contact</a>
                 <a href="#about" class="hover:text-red-600 transition-colors">About</a>
+                <a href="#reviews" class="hover:text-red-600 transition-colors">Reviews</a>
                 <a href="#login"
                     class="bg-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition-all">Sign In</a>
             </div>
@@ -601,8 +607,8 @@
             <div class="md:w-1/2 p-12 lg:p-16">
                 <div class="flex gap-10 border-b border-gray-100 dark:border-gray-700 mb-10">
                     <button class="pb-4 font-black text-2xl border-b-4 border-red-600">Login</button>
-                    <button
-                        class="pb-4 font-black text-2xl text-gray-300 dark:text-gray-600 hover:text-gray-400 transition-colors">Register</button>
+                    <a href="#register"
+                        class="pb-4 font-black text-2xl text-gray-300 dark:text-gray-600 hover:text-gray-400 transition-colors">Register</a>
                 </div>
 
                 <form class="space-y-8">
@@ -625,9 +631,182 @@
                         In to Kingdom</button>
 
                     <div class="text-center">
-                        <p class="text-gray-400 font-medium">Don't have an account? <a href="#"
+                        <p class="text-gray-400 font-medium">Don't have an account? <a href="#register"
                                 class="text-blue-800 dark:text-blue-400 font-bold">Join the adventure</a></p>
                     </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Register -->
+    <main id="register" class="flex-1 flex items-center justify-center p-6 pt-24">
+        <div
+            class="bg-white dark:bg-gray-800 w-full max-w-5xl rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row">
+            <!-- Left: Info -->
+            <div class="md:w-1/2 bg-red-600 p-12 text-white flex flex-col justify-center relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-black mb-8 leading-tight">Join the <br>Kingdom.</h2>
+                    <p class="text-red-100 text-lg mb-10 leading-relaxed">Join thousands of travelers who have discovered
+                        the magic of Cambodia. Get exclusive access to hidden gems and local secrets.</p>
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4">
+                            <span
+                                class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center font-bold">✓</span>
+                            Early access to new destinations
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span
+                                class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center font-bold">✓</span>
+                            Connect with local guides
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span
+                                class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center font-bold">✓</span>
+                            Share your own stories
+                        </li>
+                    </ul>
+                </div>
+                <!-- Abstract Design -->
+                <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-red-700 rounded-full opacity-50 blur-3xl"></div>
+                <div class="absolute -top-20 -right-20 w-80 h-80 bg-blue-900 rounded-full opacity-30 blur-3xl"></div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="md:w-1/2 p-12 lg:p-16">
+                <div class="flex gap-10 border-b border-gray-100 dark:border-gray-700 mb-10">
+                    <a href="#login"
+                        class="pb-4 font-black text-2xl text-gray-300 dark:text-gray-600 hover:text-gray-400 transition-colors">Login</a>
+                    <button class="pb-4 font-black text-2xl border-b-4 border-red-600">Register</button>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-3">Full
+                            Name</label>
+                        <input type="text" placeholder="John Doe"
+                            class="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-2xl px-6 py-4 focus:ring-4 focus:ring-red-100 dark:focus:ring-red-900/30 transition-all outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-3">Email
+                            Address</label>
+                        <input type="email" placeholder="explorer@world.com"
+                            class="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-2xl px-6 py-4 focus:ring-4 focus:ring-red-100 dark:focus:ring-red-900/30 transition-all outline-none">
+                    </div>
+                    <div>
+                        <label
+                            class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-3">Password</label>
+                        <input type="password" placeholder="••••••••"
+                            class="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-2xl px-6 py-4 focus:ring-4 focus:ring-red-100 dark:focus:ring-red-900/30 transition-all outline-none">
+                    </div>
+                    <button
+                        class="w-full bg-red-600 text-white font-black py-5 rounded-2xl text-lg hover:bg-red-700 hover:shadow-xl hover:shadow-red-500/30 transition-all">Create
+                        Account</button>
+
+                    <div class="text-center">
+                        <p class="text-gray-400 font-medium">Already have an account? <a href="#login"
+                                class="text-blue-800 dark:text-blue-400 font-bold">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Reviews -->
+    <main id="reviews" class="pt-32 pb-24 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black mb-4">Traveler Reviews</h2>
+                <div class="w-24 h-1.5 bg-red-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
+                <!-- Review 1 -->
+                <div
+                    class="bg-white dark:bg-gray-900 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-gray-800">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center font-bold text-red-600">
+                            SD</div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <div class="text-yellow-400 flex gap-1">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 italic">"Angkor Wat at sunrise was a life-changing
+                        experience. This guide helped me find the best spots away from the crowds!"</p>
+                </div>
+                <!-- Review 2 -->
+                <div
+                    class="bg-white dark:bg-gray-900 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-gray-800">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-800">
+                            ML</div>
+                        <div>
+                            <h4 class="font-bold">Marc Lee</h4>
+                            <div class="text-yellow-400 flex gap-1">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 italic">"Koh Rong is paradise. The beaches are even better
+                        than the photos. Highly recommend the island tour."</p>
+                </div>
+                <!-- Review 3 -->
+                <div
+                    class="bg-white dark:bg-gray-900 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-gray-800">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center font-bold text-green-600">
+                            AK</div>
+                        <div>
+                            <h4 class="font-bold">Anna Klein</h4>
+                            <div class="text-yellow-400 flex gap-1">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 italic">"The local culture and food in Phnom Penh are
+                        incredible. This website was a great resource for my planning."</p>
+                </div>
+            </div>
+
+            <!-- Leave a Review Form -->
+            <div class="max-w-3xl mx-auto bg-white dark:bg-gray-900 p-12 rounded-[3rem] shadow-2xl">
+                <h3 class="text-3xl font-black mb-8 text-center">Share Your Story</h3>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-3">Your
+                                Name</label>
+                            <input type="text" placeholder="John Doe"
+                                class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl px-6 py-4 focus:ring-4 focus:ring-red-100 dark:focus:ring-red-900/30 transition-all outline-none">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-3">Rating</label>
+                            <select
+                                class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl px-6 py-4 focus:ring-4 focus:ring-red-100 dark:focus:ring-red-900/30 transition-all outline-none appearance-none">
+                                <option>5 Stars - Excellent</option>
+                                <option>4 Stars - Great</option>
+                                <option>3 Stars - Good</option>
+                                <option>2 Stars - Fair</option>
+                                <option>1 Star - Poor</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-3">Your
+                            Review</label>
+                        <textarea rows="4" placeholder="How was your trip?"
+                            class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl px-6 py-4 focus:ring-4 focus:ring-red-100 dark:focus:ring-red-900/30 transition-all outline-none"></textarea>
+                    </div>
+                    <button
+                        class="w-full bg-blue-800 text-white font-black py-5 rounded-2xl text-lg hover:bg-blue-900 transition-all">Submit
+                        Review</button>
                 </form>
             </div>
         </div>

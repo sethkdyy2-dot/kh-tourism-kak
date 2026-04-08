@@ -11,6 +11,18 @@
     <style>
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
  
@@ -87,7 +99,7 @@
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="./pic/ECAR_Sunset_Ankgor_Wat_Cambodia.jpg" alt="Angkor Wat"
-                class="bg-[ w-full h-full object-cover]">
+                class="w-full h-full object-cover">
             <div class="absolute inset-0 "></div>
         </div>
         <div class="relative z-10 container mx-auto px-6 text-center text-white">
@@ -148,7 +160,8 @@
             </div>
         </div>
     </section>
-    <main id="Destinations" class="pt-32 pb-24">
+    <main>
+        <section id="Destinations" class="pt-32 pb-24">
         <div class="container mx-auto px-6">
             <h1 class="text-5xl font-black mb-12 text-center">Popular Destinations</h1>
 
@@ -233,9 +246,9 @@
                 </div>
             </div>
         </div>
-    </main>
 
-    <main id="Explore" class="pt-24">
+
+    <section id="Explore" class="pt-24">
         <!-- Hero Detail -->
         <section class="relative h-[60vh]">
             <img src="./pic/ECAR_Sunset_Ankgor_Wat_Cambodia.jpg" alt="Angkor Wat Detail"
@@ -258,8 +271,8 @@
                         as his state temple and eventual mausoleum.</p>
 
                     <div class="grid grid-cols-2 gap-8 my-12">
-                        <img src="./pic/download (1).jpg" alt="Gallery 1" class="rounded-3xl h-50 w-100 shadow-lg">
-                        <img src="./pic/download (2).jpg" alt="Gallery 2" class="rounded-3xl h-50 w-100 shadow-lg">
+                        <img src="./pic/download (1).jpg" alt="Gallery 1" class="rounded-3xl w-full h-64 object-cover shadow-lg">
+                        <img src="./pic/download (2).jpg" alt="Gallery 2" class="rounded-3xl w-full h-64 object-cover shadow-lg">
                     </div>
                 </div>
 
@@ -271,14 +284,14 @@
                                 <span class="bg-red-100 dark:bg-red-900/30 p-2 rounded-lg text-red-600">🕒</span>
                                 <div>
                                     <p class="font-bold">Opening Hours</p>
-                                    <p class="text-gray-500">5:00 AM - 6:30 PM</p>
+                                    <p class="text-gray-500 dark:text-gray-400">5:00 AM - 6:30 PM</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-4">
                                 <span class="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg text-blue-600">🎫</span>
                                 <div>
                                     <p class="font-bold">Entry</p>
-                                    <p class="text-gray-500">$30</p>
+                                    <p class="text-gray-500 dark:text-gray-400">$30</p>
                                 </div>
                             </li>
 
@@ -290,8 +303,8 @@
                 </div>
             </div>
         </section>
-    </main>
-    <main id="Explore-Phnom" class="pt-24">
+
+    <section id="Explore-Phnom" class="pt-24">
         <!-- Hero Detail -->
         <section class="relative h-[60vh]">
             <img src="./pic/wp2196310.jpg" alt="Angkor Wat Detail" class="w-full h-full object-cover">
@@ -315,9 +328,9 @@
 
                     <div class="grid grid-cols-2 gap-8 my-12">
                         <img src="./pic/Think-Cambodia-PhnomPenh-470641878-f9photos-Copy.jpg" alt="Gallery 1"
-                            class="rounded-3xl h-55 w-100 shadow-lg">
+                            class="rounded-3xl w-full h-64 object-cover shadow-lg">
                         <img src="./pic/Wat_Phnom_Doun_Penh.jpg" alt="Gallery 2"
-                            class="rounded-3xl h-55 w-100 shadow-lg">
+                            class="rounded-3xl w-full h-64 object-cover shadow-lg">
                     </div>
                 </div>
 
@@ -329,14 +342,14 @@
                                 <span class="bg-red-100 dark:bg-red-900/30 p-2 rounded-lg text-red-600">🕒</span>
                                 <div>
                                     <p class="font-bold">Opening Hours</p>
-                                    <p class="text-gray-500">5:00 AM - 5:30 PM</p>
+                                    <p class="text-gray-500 dark:text-gray-400">5:00 AM - 5:30 PM</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-4">
                                 <span class="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg text-blue-600">🎫</span>
                                 <div>
                                     <p class="font-bold">Entry Fee</p>
-                                    <p class="text-gray-500">$37 (1-day pass)</p>
+                                    <p class="text-gray-500 dark:text-gray-400">$37 (1-day pass)</p>
                                 </div>
                             </li>
 
@@ -348,8 +361,8 @@
                 </div>
             </div>
         </section>
-    </main>
-    <main id="Explore-Kosrong" class="pt-24">
+
+    <section id="Explore-Kosrong" class="pt-24">
         <!-- Hero Detail -->
         <section class="relative h-[60vh]">
             <img src="./pic/R.jpg" alt="Angkor Wat Detail" class="w-full h-full object-cover">
@@ -373,9 +386,9 @@
                     </p>
 
                     <div class="grid grid-cols-2 gap-8 my-12">
-                        <img src="./pic/OIP (1).webp" alt="Gallery 1" class="rounded-3xl h-50 w-100 shadow-lg">
+                        <img src="./pic/OIP (1).webp" alt="Gallery 1" class="rounded-3xl w-full h-64 object-cover shadow-lg">
                         <img src="./pic/30.312.1-Cambodias-Eco-friendly-Retreat-Song-Saa-Private-Island.webp"
-                            alt="Gallery 2" class="rounded-3xl h-50 w-100 shadow-lg">
+                            alt="Gallery 2" class="rounded-3xl w-full h-64 object-cover shadow-lg">
                     </div>
                 </div>
 
@@ -387,14 +400,14 @@
                                 <span class="bg-red-100 dark:bg-red-900/30 p-2 rounded-lg text-red-600">🕒</span>
                                 <div>
                                     <p class="font-bold">Opening Hours</p>
-                                    <p class="text-gray-500">24h</p>
+                                    <p class="text-gray-500 dark:text-gray-400">24h</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-4">
                                 <span class="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg text-blue-600">🎫</span>
                                 <div>
                                     <p class="font-bold">Entry </p>
-                                    <p class="text-gray-500">$50$</p>
+                                    <p class="text-gray-500 dark:text-gray-400">$50$</p>
                                 </div>
                             </li>
 
@@ -406,10 +419,10 @@
                 </div>
             </div>
         </section>
-    </main>
+
 
     <!-- about -->
-    <main id="about" class="pt-32 pb-24">
+    <section id="about" class="pt-32 pb-24">
         <section class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center mb-20">
                 <h1 class="text-6xl font-black mb-8 tracking-tighter uppercase">The Kingdom of <span
@@ -457,11 +470,11 @@
 
 
 
-    </main>
+
 
 
     <!-- contact -->
-    <main id="contact" class="pt-32 pb-24">
+    <section id="contact" class="reveal pt-32 pb-24">
         <div class="container mx-auto px-6">
             <h1 class="text-6xl font-black mb-16 tracking-tighter">Contact Us</h1>
 
@@ -483,7 +496,7 @@
                             </div>
                             <div>
                                 <h3 class="font-black text-xl mb-1">Address</h3>
-                                <p class="text-gray-500">Toul Sanker, Phnom Penh, Cambodia</p>
+                                <p class="text-gray-500 dark:text-gray-400">Toul Sanker, Phnom Penh, Cambodia</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-6">
@@ -497,7 +510,7 @@
                             </div>
                             <div>
                                 <h3 class="font-black text-xl mb-1">Phone Number</h3>
-                                <p class="text-gray-500">+855 23 456 789 / +855 12 345 678 </p>
+                                <p class="text-gray-500 dark:text-gray-400">+855 23 456 789 / +855 12 345 678 </p>
                             </div>
                         </div>
                         <div class="flex items-center gap-6">
@@ -511,7 +524,7 @@
                             </div>
                             <div>
                                 <h3 class="font-black text-xl mb-1">Email Support</h3>
-                                <p class="text-gray-500">info@visitcambodia.com / support@cambodiatourism.gov</p>
+                                <p class="text-gray-500 dark:text-gray-400">info@visitcambodia.com / support@cambodiatourism.gov</p>
                             </div>
                         </div>
                     </div>
@@ -519,7 +532,7 @@
                     <div
                         class="mt-16 p-10 bg-gray-50 dark:bg-gray-800 rounded-[2.5rem] border border-gray-100 dark:border-gray-700">
                         <h3 class="text-2xl font-black mb-4">Official Tourism Guide</h3>
-                        <p class="text-gray-500 mb-6">Download our official 2026 travel brochure for all the latest
+                        <p class="text-gray-500 dark:text-gray-400 mb-6">Download our official 2026 travel brochure for all the latest
                             safety tips and hidden gems.</p>
                         <button
                             class="bg-blue-800 text-white font-bold px-8 py-3 rounded-xl hover:bg-blue-900 transition-all">Download
@@ -568,10 +581,10 @@
                 </div>
             </div>
         </div>
-    </main>
+
 
     <!-- Login -->
-    <main id="login" class="flex-1 flex items-center justify-center p-6 pt-24">
+    <section id="login" class="flex-1 flex items-center justify-center p-6 pt-24">
         <div
             class="bg-white dark:bg-gray-800 w-full max-w-5xl rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row">
             <!-- Left: Info -->
@@ -637,10 +650,10 @@
                 </form>
             </div>
         </div>
-    </main>
+
 
     <!-- Register -->
-    <main id="register" class="flex-1 flex items-center justify-center p-6 pt-24">
+    <section id="register" class="flex-1 flex items-center justify-center p-6 pt-24">
         <div
             class="bg-white dark:bg-gray-800 w-full max-w-5xl rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row">
             <!-- Left: Info -->
@@ -710,10 +723,10 @@
                 </form>
             </div>
         </div>
-    </main>
+
 
     <!-- Reviews -->
-    <main id="reviews" class="pt-32 pb-24 bg-gray-50 dark:bg-gray-800">
+    <section id="reviews" class="pt-32 pb-24 bg-gray-50 dark:bg-gray-800">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20">
                 <h2 class="text-5xl font-black mb-4">Traveler Reviews</h2>
@@ -810,7 +823,7 @@
                 </form>
             </div>
         </div>
-    </main>
+
 
 
 
@@ -828,10 +841,10 @@
             <div>
                 <h5 class="text-lg font-bold mb-6">Explore</h5>
                 <ul class="space-y-4 text-gray-500 dark:text-gray-400">
-                    <li><a href="destinations.html" class="hover:text-red-600 transition-colors">Siem Reap</a></li>
-                    <li><a href="destinations.html" class="hover:text-red-600 transition-colors">Phnom Penh</a></li>
-                    <li><a href="destinations.html" class="hover:text-red-600 transition-colors">Koh Rong</a></li>
-                    <li><a href="destinations.html" class="hover:text-red-600 transition-colors">Kampot</a></li>
+                    <li><a href="#Explore" class="hover:text-red-600 transition-colors">Siem Reap</a></li>
+                    <li><a href="#Explore-Phnom" class="hover:text-red-600 transition-colors">Phnom Penh</a></li>
+                    <li><a href="#Explore-Kosrong" class="hover:text-red-600 transition-colors">Koh Rong</a></li>
+                    <li><a href="#Destinations" class="hover:text-red-600 transition-colors">All Destinations</a></li>
                 </ul>
             </div>
             <div>
@@ -848,6 +861,30 @@
             &copy; 2026 Kingdom of Cambodia Tourism. Official Guide.
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" 
+        class="fixed bottom-8 right-8 bg-red-600 text-white p-4 rounded-full shadow-2xl opacity-0 transition-all duration-300 hover:bg-red-700 focus:outline-none z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100');
+            } else {
+                backToTop.classList.remove('opacity-100');
+                backToTop.classList.add('opacity-0');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 
 </html>

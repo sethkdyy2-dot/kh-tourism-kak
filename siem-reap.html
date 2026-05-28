@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet">
+    <script src="./scripts/theme.js"></script>
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cloud-dancer: #F2F0EA;
+            --deep-obsidian: #0D0D0D;
+            --lotus-pink: #D94F4F;
+            --mekong-teal: #2D5A5A;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cloud-dancer);
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .dark body {
+            background-color: var(--deep-obsidian);
+        }
+
+        .glass-premium {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-zoom {
+            animation: slowZoom 30s infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+    </style>
+    <link rel="shortcut icon" href="./pic/circlesunset1.webp" type="image/x-icon">
+    <title>Siem Reap | Visit Cambodia</title>
+</head>
+
+<body class="text-deep-obsidian dark:text-cloud-dancer transition-colors duration-500 overflow-x-hidden">
+    
+    <!-- Ultra-Minimalist Navigation -->
+    <header class="fixed w-full z-50 px-10 py-8 mix-blend-difference">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="serif text-3xl font-bold text-white tracking-widest uppercase italic">
+                Cambodia<span class="text-lotus-pink">.</span>
+            </a>
+            
+                   <div class="hidden md:flex items-center gap-16 text-white uppercase tracking-[0.3em] text-[10px] font-bold">
+                <a href="index.html" class="hover:opacity-50 transition-opacity">Home</a>
+                <a href="Destinations.html" class="hover:opacity-50 transition-opacity">Destinations</a>
+                <a href="About.html" class="hover:opacity-50 transition-opacity">About</a>
+                
+                <a href="Contact.html" class="hover:opacity-50 transition-opacity">Contact</a>
+                <a href="reviews.html" class="hover:opacity-50 transition-opacity">Review</a>
+                <a href="auth.html" class="px-6 py-2 border border-white/20 rounded-full hover:bg-white hover:text-deep-obsidian transition-all">Sign In</a>
+            </div>
+
+            <div class="flex items-center gap-8">
+                <button onclick="toggleTheme()" class="text-white hover:rotate-90 transition-transform duration-500">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"></path>
+                    </svg>
+                </button>
+                <button id="menu-toggle" class="text-white focus:outline-none md:hidden">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Full-screen Mobile Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 z-[100] bg-deep-obsidian translate-x-full transition-transform duration-700 ease-in-out px-10 py-8 flex flex-col">
+        <div class="flex justify-between items-center mb-20">
+            <span class="serif text-2xl text-white italic">Menu.</span>
+            <button id="menu-close" class="text-white">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col gap-12 text-white serif text-5xl italic">
+            <a href="Destinations.html" class="hover:text-lotus-pink transition-colors">Destinations</a>
+            <a href="About.html" class="hover:text-lotus-pink transition-colors">Heritage</a>
+            
+            <a href="Contact.html" class="hover:text-lotus-pink transition-colors">Inquiry</a>
+            <a href="auth.html" class="hover:text-lotus-pink transition-colors">Sign In</a>
+        </div>
+        <div class="mt-auto pb-10">
+            <p class="text-[10px] uppercase tracking-[0.5em] text-white/20 font-black italic">The Kingdom of Wonder • 2026</p>
+        </div>
+    </div>
+
+    <main>
+        <!-- Cinematic Hero -->
+        <section class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="./pic/ECAR_Sunset_Ankgor_Wat_Cambodia.jpg" alt="Angkor Wat at sunset" class="w-full h-full object-cover hero-zoom">
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+            <div class="relative z-10 text-center text-white reveal">
+                <p class="uppercase tracking-[0.5em] text-xs mb-8 opacity-70">Heritage Site 01</p>
+                <h1 class="serif text-7xl md:text-9xl italic leading-none">Siem <span class="not-italic font-black text-lotus-pink">Reap</span></h1>
+            </div>
+        </section>
+
+        <section class="py-40 container mx-auto px-10">
+            <div class="flex flex-col lg:flex-row gap-32">
+                <div class="lg:w-2/3">
+                    <div class="reveal mb-32">
+                        <h2 class="serif text-5xl md:text-7xl italic mb-12">The Soul of the <br>Kingdom.</h2>
+                        <p class="text-xl md:text-2xl leading-relaxed text-gray-500 dark:text-white/50 font-light mb-12">
+                            Angkor Wat is the heart and soul of Cambodia. As the largest religious monument in the world, it stands as a testament to the architectural genius of the Khmer Empire.
+                        </p>
+                        <p class="text-lg leading-relaxed text-gray-500 dark:text-white/40 font-light">
+                            Built in the early 12th century by King Suryavarman II, the temple was originally dedicated to the Hindu god Vishnu before transitioning into a Buddhist site. Its intricate bas-reliefs and iconic towers are recognized globally as a masterpiece of human creativity.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-20 mb-32">
+                        <div class="reveal">
+                            <div class="rounded-[3rem] overflow-hidden aspect-square shadow-2xl">
+                                <img src="./pic/download (1).jpg" alt="Intricate carvings at Siem Reap temple" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="reveal mt-20">
+                            <div class="rounded-[3rem] overflow-hidden aspect-square shadow-2xl">
+                                <img src="./pic/download (2).jpg" alt="Stone faces of Bayon Temple" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal">
+                        <h3 class="serif text-4xl italic mb-8">Beyond the Main Temple</h3>
+                        <p class="text-lg leading-relaxed text-gray-500 dark:text-white/40 font-light mb-12">
+                            The Angkor Archaeological Park covers over 400 square kilometers. Don't miss the enigmatic faces of <strong>Bayon Temple</strong> or the jungle-entwined ruins of <strong>Ta Prohm</strong>, made famous by its massive tree roots reclaiming the stone.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/3">
+                    <div class="glass-premium p-12 rounded-[3rem] sticky top-32 reveal">
+                        <h3 class="serif text-2xl italic mb-12">Travel wisdom</h3>
+                        <div class="space-y-12">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest font-bold opacity-40 mb-2">Sacred Timing</p>
+                                <p class="serif text-xl italic">5:00 AM for Sunrise</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest font-bold opacity-40 mb-2">Investment</p>
+                                <p class="serif text-xl italic">$37 (1-Day Pass)</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest font-bold opacity-40 mb-2">Sacred Attire</p>
+                                <p class="serif text-xl italic">Modest (Shoulders/Knees)</p>
+                            </div>
+                        </div>
+                        <a href="Contact.html" class="block w-full bg-lotus-pink text-white text-center py-6 rounded-full uppercase tracking-widest text-[10px] font-bold mt-16 hover:bg-white hover:text-deep-obsidian transition-all">Begin Planning</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: Premium Minimal -->
+   <footer class="bg-deep-obsidian text-gray-600 pt-40 pb-20">
+        <div class="container mx-auto px-10">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-20 border-b border-white/5 pb-40 mb-20">
+                <div class="md:w-1/3">
+                    <a href="#" class="serif text-4xl italic mb-10 block tracking-widest uppercase">Cambodia.</a>
+                    <p class="text-gray-600 font-light leading-relaxed">Guiding travelers through the sacred and the serene. Member of the Global Tourism Authority 2026.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-20">
+                    <div>
+                        <h5 class="uppercase tracking-[0.3em] text-[10px] font-bold mb-10 text-gray-600">Navigate</h5>
+                        <ul class="space-y-6 text-sm font-light">
+                            <li><a href="Destinations.html" class="hover:text-lotus-pink transition-colors">Destinations</a></li>
+                            <li><a href="About.html" class="hover:text-lotus-pink transition-colors">Our History</a></li>
+                            <li><a href="reviews.html" class="hover:text-lotus-pink transition-colors">Stories</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="uppercase tracking-[0.3em] text-[10px] font-bold mb-10 text-gray-600">Connect</h5>
+                        <ul class="space-y-6 text-sm font-light">
+                            <li><a href="Contact.html" class="hover:text-lotus-pink transition-colors">Inquiries</a></li>
+                            <li><a href="#" class="hover:text-lotus-pink transition-colors">Instagram</a></li>
+                            <li><a href="#" class="hover:text-lotus-pink transition-colors">Journal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest text-gray-700 font-bold">
+                <p>&copy; 2026 Kingdom of Wonder. All Rights Reserved.</p>
+                <div class="flex gap-10">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
